@@ -116,7 +116,7 @@ function checkClear() {
     for(let i = 3; i < imageData.data.length; i += 4) {
         if(imageData.data[i] === 0) cleared++;
     }
-    if(cleared / (canvas.width*canvas.height) > 0.1) { // 10% limpo
+    if(cleared / (canvas.width*canvas.height) > 0.6) { // 10% limpo
         canvas.style.display = 'none';
         document.querySelectorAll('header, nav, section, footer').forEach(el => el.style.opacity = 1);
     } else {
