@@ -1,143 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ProServiLimp</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<style>
-    * { box-sizing: border-box; margin:0; padding:0; font-family: 'Roboto', sans-serif; }
-    body { line-height:1.6; color:#333; }
-    header {
-        background:#1E90FF;
-        color:white;
-        padding: 15px 40px;
-        display:flex;
-        justify-content: space-between;
-        align-items:center;
-        position: sticky;
-        top:0;
-        z-index:1000;
-    }
-    nav a { color:white; margin-left: 20px; text-decoration:none; font-weight:700; transition: 0.3s; }
-    nav a:hover { color:#FFD700; }
-    .hero {
-        background: url('https://images.unsplash.com/photo-1581579183839-8f05d6f9e15d?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-        color:white;
-        height: 80vh;
-        display:flex;
-        flex-direction: column;
-        justify-content:center;
-        align-items:center;
-        text-align:center;
-        padding: 0 20px;
-    }
-    .hero h1 { font-size:3rem; margin-bottom:20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);}
-    .hero p { font-size:1.2rem; margin-bottom:30px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);}
-    .hero button {
-        background:#FFD700;
-        border:none;
-        padding: 15px 30px;
-        font-size:1rem;
-        font-weight:700;
-        cursor:pointer;
-        border-radius:5px;
-        transition:0.3s;
-    }
-    .hero button:hover { background:#FFA500; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProServiLimp</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-    section { padding: 60px 40px; max-width:1200px; margin:auto; }
-    section h2 { text-align:center; margin-bottom:40px; font-size:2rem; color:#1E90FF; }
+        body {
+            background-color: #f7f7f7;
+            color: #333;
+        }
 
-    .about p { max-width:800px; margin:auto; text-align:center; font-size:1.1rem; }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
 
-    .services {
-        display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-        gap:30px;
-    }
-    .service-card {
-        background:white;
-        padding:30px;
-        border-radius:10px;
-        text-align:center;
-        box-shadow:0 4px 6px rgba(0,0,0,0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .service-card:hover {
-        transform: translateY(-10px);
-        box-shadow:0 8px 12px rgba(0,0,0,0.2);
-    }
-    .service-card i {
-        font-size:2.5rem;
-        color:#1E90FF;
-        margin-bottom:15px;
-    }
+        header h1 {
+            font-size: 2em;
+        }
 
-    .contact p, .contact a { text-align:center; font-size:1.1rem; margin-bottom:10px; display:block; }
-    .contact a { color:#1E90FF; text-decoration:none; }
-    .contact a:hover { color:#FFD700; }
+        nav {
+            text-align: center;
+            margin: 10px 0;
+        }
 
-    footer {
-        background:#333;
-        color:white;
-        text-align:center;
-        padding:20px;
-    }
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        .services, .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .service {
+            background-color: white;
+            flex: 1 1 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+
+        /* Botão de contato */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <div class="logo"><h1>ProServiLimp</h1></div>
+    <h1>ProServiLimp</h1>
     <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#contato">Contato</a>
+        <a href="#services">Serviços</a>
+        <a href="#contact">Contato</a>
     </nav>
 </header>
 
-<section class="hero">
-    <h1>Limpeza e manutenção com excelência!</h1>
-    <p>Seu espaço limpo, organizado e seguro com nossa equipe especializada.</p>
-    <button onclick="window.location.href='#contato'">Solicitar Orçamento</button>
-</section>
-
-<section id="sobre" class="section about">
-    <h2>Sobre Nós</h2>
-    <p>A ProServiLimp oferece serviços de limpeza e manutenção para escritórios, residências, Airbnb, pousadas e espaços comerciais em Torres Novas. Garantimos atendimento rápido, eficiente e de confiança, cuidando do seu espaço como se fosse nosso.</p>
-</section>
-
-<section id="servicos" class="section">
+<section id="services">
     <h2>Nossos Serviços</h2>
     <div class="services">
-        <div class="service-card"><i class="fas fa-briefcase"></i><h3>Limpeza de Escritórios</h3></div>
-        <div class="service-card"><i class="fas fa-home"></i><h3>Limpeza Residencial</h3></div>
-        <div class="service-card"><i class="fas fa-bed"></i><h3>Limpeza de Airbnb</h3></div>
-        <div class="service-card"><i class="fas fa-hotel"></i><h3>Limpeza de Pousadas</h3></div>
-        <div class="service-card"><i class="fas fa-tools"></i><h3>Reparos em Geral</h3></div>
-        <div class="service-card"><i class="fas fa-couch"></i><h3>Montagem de Móveis</h3></div>
-        <div class="service-card"><i class="fas fa-water"></i><h3>Instalações Hidráulicas</h3></div>
-        <div class="service-card"><i class="fas fa-bolt"></i><h3>Intervenções Elétricas</h3></div>
+        <div class="service">
+            <h3>Limpeza de Escritórios</h3>
+            <p>Serviço profissional diário, mantendo seu espaço sempre limpo e organizado.</p>
+        </div>
+        <div class="service">
+            <h3>Limpeza de Airbnbs e Residências</h3>
+            <p>Garantimos higiene e conforto para hóspedes e moradores.</p>
+        </div>
+        <div class="service">
+            <h3>Limpeza de Pousadas e Clínicas</h3>
+            <p>Manutenção completa de áreas comuns, recepção e sanitários.</p>
+        </div>
+        <div class="service">
+            <h3>Reparos e Montagens</h3>
+            <p>Montagem de móveis, pequenas intervenções elétricas e hidráulicas.</p>
+        </div>
     </div>
 </section>
 
-<section id="contato" class="section contact">
+<section id="contact">
     <h2>Contato</h2>
-    <p>Email: <a href="mailto:geral@proservilimp.com">geral@proservilimp.com</a></p>
-    <p>Telefone: 913639322</p>
-    <p>Site: <a href="https://www.proservilimp.com" target="_blank">www.proservilimp.com</a></p>
+    <div class="contact">
+        <div class="service">
+            <p>Email: <a href="mailto:geral@proservilimp.com">geral@proservilimp.com</a></p>
+            <p>Telefone: <a href="tel:913639322">913639322</a></p>
+            <p>Website: <a href="https://www.proservilimp.com" target="_blank">www.proservilimp.com</a></p>
+            <a href="mailto:geral@proservilimp.com" class="btn">Entrar em Contato</a>
+        </div>
+    </div>
 </section>
 
 <footer>
-    <p>&copy; 2025 ProServiLimp. Todos os direitos reservados.</p>
-    <p>
-        <a href="#" style="color:white; margin:0 10px;"><i class="fab fa-facebook"></i></a>
-        <a href="#" style="color:white; margin:0 10px;"><i class="fab fa-instagram"></i></a>
-    </p>
+    <p>© 2025 ProServiLimp - Todos os direitos reservados</p>
 </footer>
 
 </body>
 </html>
-
