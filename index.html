@@ -1,23 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProServiLimp - Limpeza & Reparos</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #000; color: white; text-align: center; }
-        h1 { color: #1E90FF; }
-        p { font-size: 18px; }
-        .contato { margin-top: 20px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProServiLimp</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    * { box-sizing: border-box; margin:0; padding:0; font-family: 'Roboto', sans-serif; }
+    body { line-height:1.6; color:#333; }
+    header {
+        background:#1E90FF;
+        color:white;
+        padding: 15px 40px;
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        position: sticky;
+        top:0;
+        z-index:1000;
+    }
+    nav a { color:white; margin-left: 20px; text-decoration:none; font-weight:700; transition: 0.3s; }
+    nav a:hover { color:#FFD700; }
+    .hero {
+        background: url('https://images.unsplash.com/photo-1581579183839-8f05d6f9e15d?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+        color:white;
+        height: 80vh;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        padding: 0 20px;
+    }
+    .hero h1 { font-size:3rem; margin-bottom:20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);}
+    .hero p { font-size:1.2rem; margin-bottom:30px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);}
+    .hero button {
+        background:#FFD700;
+        border:none;
+        padding: 15px 30px;
+        font-size:1rem;
+        font-weight:700;
+        cursor:pointer;
+        border-radius:5px;
+        transition:0.3s;
+    }
+    .hero button:hover { background:#FFA500; }
+
+    section { padding: 60px 40px; max-width:1200px; margin:auto; }
+    section h2 { text-align:center; margin-bottom:40px; font-size:2rem; color:#1E90FF; }
+
+    .about p { max-width:800px; margin:auto; text-align:center; font-size:1.1rem; }
+
+    .services {
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        gap:30px;
+    }
+    .service-card {
+        background:white;
+        padding:30px;
+        border-radius:10px;
+        text-align:center;
+        box-shadow:0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow:0 8px 12px rgba(0,0,0,0.2);
+    }
+    .service-card i {
+        font-size:2.5rem;
+        color:#1E90FF;
+        margin-bottom:15px;
+    }
+
+    .contact p, .contact a { text-align:center; font-size:1.1rem; margin-bottom:10px; display:block; }
+    .contact a { color:#1E90FF; text-decoration:none; }
+    .contact a:hover { color:#FFD700; }
+
+    footer {
+        background:#333;
+        color:white;
+        text-align:center;
+        padding:20px;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
-    <h1>ProServiLimp</h1>
-    <p>Especialistas em limpeza e pequenos reparos em casas e apartamentos.</p>
-    <p>Atendemos Torres Novas, Entroncamento e região.</p>
-    <div class="contato">
-        <p>📞 913 639 322</p>
-        <p>✉️ geral@proservilimp.com</p>
+
+<header>
+    <div class="logo"><h1>ProServiLimp</h1></div>
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Limpeza e manutenção com excelência!</h1>
+    <p>Seu espaço limpo, organizado e seguro com nossa equipe especializada.</p>
+    <button onclick="window.location.href='#contato'">Solicitar Orçamento</button>
+</section>
+
+<section id="sobre" class="section about">
+    <h2>Sobre Nós</h2>
+    <p>A ProServiLimp oferece serviços de limpeza e manutenção para escritórios, residências, Airbnb, pousadas e espaços comerciais em Torres Novas. Garantimos atendimento rápido, eficiente e de confiança, cuidando do seu espaço como se fosse nosso.</p>
+</section>
+
+<section id="servicos" class="section">
+    <h2>Nossos Serviços</h2>
+    <div class="services">
+        <div class="service-card"><i class="fas fa-briefcase"></i><h3>Limpeza de Escritórios</h3></div>
+        <div class="service-card"><i class="fas fa-home"></i><h3>Limpeza Residencial</h3></div>
+        <div class="service-card"><i class="fas fa-bed"></i><h3>Limpeza de Airbnb</h3></div>
+        <div class="service-card"><i class="fas fa-hotel"></i><h3>Limpeza de Pousadas</h3></div>
+        <div class="service-card"><i class="fas fa-tools"></i><h3>Reparos em Geral</h3></div>
+        <div class="service-card"><i class="fas fa-couch"></i><h3>Montagem de Móveis</h3></div>
+        <div class="service-card"><i class="fas fa-water"></i><h3>Instalações Hidráulicas</h3></div>
+        <div class="service-card"><i class="fas fa-bolt"></i><h3>Intervenções Elétricas</h3></div>
     </div>
+</section>
+
+<section id="contato" class="section contact">
+    <h2>Contato</h2>
+    <p>Email: <a href="mailto:geral@proservilimp.com">geral@proservilimp.com</a></p>
+    <p>Telefone: 913639322</p>
+    <p>Site: <a href="https://www.proservilimp.com" target="_blank">www.proservilimp.com</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2025 ProServiLimp. Todos os direitos reservados.</p>
+    <p>
+        <a href="#" style="color:white; margin:0 10px;"><i class="fab fa-facebook"></i></a>
+        <a href="#" style="color:white; margin:0 10px;"><i class="fab fa-instagram"></i></a>
+    </p>
+</footer>
+
 </body>
 </html>
+
