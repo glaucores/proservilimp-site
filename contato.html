@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProServiLimp - Contato</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background-color: #000; color: #f5f5f5; overflow-x: hidden; }
+
+/* Menu fixo */
+nav {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+nav a:hover { color: #82cfff; }
+
+/* Conteúdo */
+section {
+    max-width: 800px;
+    margin: 100px auto 30px auto; /* espaço extra para o menu fixo */
+    padding: 0 20px;
+}
+h2 { color: #4da3ff; margin-bottom: 15px; text-align: center; }
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.contact div {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+.contact a.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.contact a.btn:hover { background-color: #4da3ff; }
+
+footer {
+    background-color: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 30px;
+}
+</style>
+</head>
+<body>
+
+<!-- Menu fixo -->
+<nav>
+    <a href="index.html">Início</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="contato.html">Contato</a>
+</nav>
+
+<section>
+    <h2>Entre em Contato</h2>
+    <div class="contact">
+        <div>
+            <p>Email: <a href="mailto:geral@proservilimp.com">geral@proservilimp.com</a></p>
+            <p>Telefone: <a href="tel:913639322">913639322</a></p>
+            <p>Website: <a href="https://www.proservilimp.com" target="_blank">www.proservilimp.com</a></p>
+            <a href="mailto:geral@proservilimp.com" class="btn">Entrar em Contato</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 ProServiLimp - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
