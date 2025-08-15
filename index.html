@@ -38,15 +38,25 @@ header, nav, section, footer {
     transition: opacity 1s ease;
 }
 
-header { background-color: #000; color: white; padding: 1rem; text-align: center; }
-header h1 { font-size: 2em; }
+header { background-color: #000; color: white; text-align: center; }
+
+/* Imagem de capa ocupando toda a largura */
+header img.capa {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 nav { text-align: center; margin: 10px 0; }
 nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
 nav a:hover { text-decoration: underline; color: #82cfff; }
+
 section { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
 h2 { color: #4da3ff; margin-bottom: 15px; }
+
 .services, .contact { display: flex; flex-wrap: wrap; gap: 20px; }
 .service { background-color: #000; color: #f5f5f5; flex: 1 1 300px; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); }
+
 footer { background-color: #000; color: #aaa; text-align: center; padding: 1rem; margin-top: 30px; }
 .btn { display: inline-block; padding: 0.5rem 1rem; background-color: #000; color: white; border: none; border-radius: 5px; text-decoration: none; margin-top: 10px; }
 .btn:hover { background-color: #4da3ff; }
@@ -60,7 +70,7 @@ footer { background-color: #000; color: #aaa; text-align: center; padding: 1rem;
 </div>
 
 <header>
-    <img src="capa.png" alt="ProServiLimp" style="width: 300px; max-width: 80%;">
+    <img src="capa.png" alt="ProServiLimp" class="capa">
     <nav class="menu">
         <a href="#services">Serviços</a>
         <a href="#contact">Contato</a>
